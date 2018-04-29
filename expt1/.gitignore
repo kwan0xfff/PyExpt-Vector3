@@ -1,0 +1,7 @@
+# object code
+*.o
+*.so
+__pycache__/
+
+# generated source
+*_wrap.cc
