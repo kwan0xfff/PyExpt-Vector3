@@ -9,5 +9,13 @@ v.y = 2.0
 v.z = 3.0
 
 print(v.x, v.y, v.z)
+print(v)
 
+v1 = Vector3(1.1, 2.2, 3.3)
+print(v1)
 
+v2 = Vector3(1,2)
+print(v2)
+
+v2 = Vector3(1)
+print(v2)

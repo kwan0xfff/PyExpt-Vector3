@@ -17,6 +17,6 @@ _Vector3.so : Vector3_wrap.o Vector3.o
 clean :
 	rm -f Vector3_wrap.c Vector3_wrap.cc Vector3_wrap.o
 
-test :
+test : _Vector3.so
 	python3 run.py
 
