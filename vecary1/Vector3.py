@@ -56,7 +56,6 @@ class Vector3:
         """
         if isinstance(other, float):
             # vector = vector * scalar
-            #print("scalar")
             _v = [ x*other for x in self.vec ]
             vec = Vector3(_v)
             return vec
@@ -70,6 +69,17 @@ class Vector3:
         else:
             raise TypeError('Vector3 __mul__ type error')
 
+    def __truediv__(self, other):
+        """Divide vector / scalar.
+        """
+        if isinstance(other, float):
+            # vector = vector / scalar
+            _v = [ x/other for x in self.vec ]
+            vec = Vector3(_v)
+            return vec
+        else:
+            raise TypeError('Vector3 __truediv__ type error')
+
     def __getitem__(self, ndx):
         """Get value of "self" at index ndx."""
         value = self.vec[ndx]
@@ -78,8 +88,6 @@ class Vector3:
     def __setitem__(self, ndx, value):
         """Set value of "self" at index ndx."""
         self.vec[ndx] = value
-
-    # No __div__ in standard operators
 
     def __abs__(self):
         """Absolute value of vector, i.e., its length."""
